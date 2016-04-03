@@ -1,6 +1,5 @@
-*.class
-.idea/
+../.idea/
 /coderetreat-2015-ws
-/node_modules
-/target
+./node_modules
+./build
 *.iml
