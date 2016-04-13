@@ -28,7 +28,14 @@ const Main = React.createClass({
         this.setState({showLeftBar: !this.state.showLeftBar});
     },
     newGame8x8(){
-        getRequest('/generate');
+        getRequest('/generate').then(
+            response => {
+                console.log(response);
+            },
+            response => {
+                console.log(response);
+            }
+        );
     },
     render(){
         return (<div>
@@ -66,6 +73,7 @@ const Main = React.createClass({
                     8 x 8
                 </MenuItem>
             </LeftNav>
+            <div className="color-box"></div>
         </div>);
     }
 });
